@@ -1,12 +1,12 @@
 from setuptools import setup
 
 setup(
-    name='django-rq-email',
-    version='0.1.0',
+    name='django-rq-email-backend',
+    version='0.1.1',
     author='Jeff Triplett',
     author_email='jeff.triplett@gmail.com',
-    packages=['django_rq_email'],
-    url='https://github.com/jefftriplett/django-rq-email',
+    packages=['django_rq_email_backend'],
+    url='https://github.com/jefftriplett/django-rq-email-backend',
     license='BSD',
     description='Provides Django email integration for RQ (Redis Queue)',
     long_description=open('README.rst').read(),

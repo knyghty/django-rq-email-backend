@@ -3,9 +3,9 @@ from django.core.mail.backends.base import BaseEmailBackend
 from .tasks import send_email
 
 
-class RqEmailBackend(BaseEmailBackend):
+class RQEmailBackend(BaseEmailBackend):
     def __init__(self, fail_silently=False, **kwargs):
-        super(RqEmailBackend, self).__init__(fail_silently)
+        super(RQEmailBackend, self).__init__(fail_silently)
         self.init_kwargs = kwargs
 
     def send_messages(self, email_messages, **kwargs):
