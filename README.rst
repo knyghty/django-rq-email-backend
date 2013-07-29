@@ -45,7 +45,7 @@ change ``EMAIL_BACKEND`` to ``RQ_EMAIL_BACKEND``, and then add the new
 Inspiration
 -----------
 
-`django-rq-email-backend` was heavilty influenced by::
+`django-rq-email-backend` was heavilty influenced by:
 
 * `django-celery-email <https://bitbucket.org/pmclanahan/django-celery-email>`_
 * `django-rq-mail <https://github.com/thoas/django-rq-mail>`_
