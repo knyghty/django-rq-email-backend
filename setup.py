@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-rq-email-backend',
-    version='0.1.1',
+    version='0.1.2',
     author='Jeff Triplett',
     author_email='jeff.triplett@gmail.com',
     packages=['django_rq_email_backend'],
