@@ -54,6 +54,10 @@ Inspiration
 Changelog
 ---------
 
+0.1.2
+-----
+* Fixed broken installation.
+
 0.1.1
 -----
 * Renamed project to avoid potential confusion with `django-rq-mail`.
