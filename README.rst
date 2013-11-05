@@ -2,6 +2,25 @@
 django-rq-email-backend
 ========================
 
+.. image:: https://travis-ci.org/jefftriplett/django-rq-email-backend.png?branch=master
+    :target: https://travis-ci.org/jefftriplett/django-rq-email-backend
+    :alt: Build Status
+
+.. image:: https://coveralls.io/repos/jefftriplett/django-rq-email-backend/badge.png?branch=master
+    :alt: Coverage Status
+
+.. image:: https://requires.io/github/jefftriplett/django-rq-email-backend/requirements.png?branch=master
+    :target: https://requires.io/github/jefftriplett/django-rq-email-backend/requirements/?branch=master
+    :alt: Requirements Status
+
+.. image:: https://badge.fury.io/py/django-rq-email-backend.png
+    :target: http://badge.fury.io/py/django-rq-email-backend
+    :alt: Latest Package Version
+
+.. image:: https://pypip.in/d/django-rq-email-backend/badge.png
+    :target: https://crate.io/packages/django-rq-email-backend?version=latest
+    :alt: Download Status
+
 ------------
 Requirements
 ------------
@@ -29,7 +48,7 @@ Installation
         'django_rq_email_backend',
     )
 
-You must then set ``django-rq-email-backend`` as your ``EMAIL_BACKEND``::
+You must then set ``django_rq_email_backend`` as your ``EMAIL_BACKEND``::
 
     EMAIL_BACKEND = 'django_rq_email_backend.backends.RQEmailBackend'
 
@@ -61,7 +80,6 @@ Changelog
 0.1.1
 -----
 * Renamed project to avoid potential confusion with `django-rq-mail`.
-
 
 0.1.0
 -----
