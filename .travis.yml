@@ -1,21 +1,23 @@
 language: python
 
 python:
-    - "2.7"
+  - "2.7"
 
 branches:
   only:
     - master
 
 env:
-    - TOXENV=py26
-    - TOXENV=py27
+  - TOXENV=py26
+  - TOXENV=py27
+  - TOXENV=py33
+  - TOXENV=py34
 
 install:
-    - pip install tox --use-mirrors
+  - pip install tox --use-mirrors
 
 script:
-    - tox
+  - tox
 
 after_success:
   - coverage report
