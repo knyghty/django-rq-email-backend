@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sys
+import django
 
 from django.conf import settings
 
@@ -12,11 +13,22 @@ settings.configure(
         'django_rq',
         'django_rq_email_backend',
     ],
+    MIDDLEWARE_CLASSES=[
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+    ]
 )
 
 
 def runtests(*test_args):
     import django.test.utils
+
+    try:
+        # Django 1.7 (2.0)
+        django.setup()
+    except AttributeError:
+        pass
 
     runner_class = django.test.utils.get_runner(settings)
     test_runner = runner_class(verbosity=1, interactive=True, failfast=False)
