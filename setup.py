@@ -33,7 +33,7 @@ setup(
     ],
     package_data={'': ['README.rst']},
     install_requires=[
-        'django',
+        'Django>=1.4',
         'rq>=0.3.4',
         'django_rq>=0.4.6'
     ],
