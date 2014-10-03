@@ -1,4 +1,6 @@
 bumpversion
+check-manifest
+coverage
 invoke
 pytest
 tox
