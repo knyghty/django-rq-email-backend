@@ -19,7 +19,7 @@ class Tox(TestCommand):
 
 setup(
     name='django-rq-email-backend',
-    version='0.1.2',
+    version='0.1.3',
     author='Jeff Triplett',
     author_email='jeff.triplett@gmail.com',
     url='https://github.com/jefftriplett/django-rq-email-backend',
