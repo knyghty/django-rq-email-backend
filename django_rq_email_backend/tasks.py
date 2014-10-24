@@ -22,4 +22,4 @@ def send_email(message, **kwargs):
         return result
     except Exception as e:
         logger.warning('Failed to send email message to %r, retrying.', message.to)
-        send_email.retry(exc=e)
+        logger.exception(e)
