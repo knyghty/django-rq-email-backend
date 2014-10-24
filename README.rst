@@ -73,6 +73,10 @@ Inspiration
 Changelog
 ---------
 
+0.1.3
+-----
+* Fixed exception handler to bubble up error if send_email fails.
+
 0.1.2
 -----
 * Fixed broken installation.
