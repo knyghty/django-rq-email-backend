@@ -4,7 +4,6 @@ from django.conf import settings
 from django.core.mail import get_connection
 from django_rq import job
 
-
 RQ_EMAIL_DEFAULT_QUEUE = getattr(settings, "RQ_EMAIL_DEFAULT_QUEUE", "default")
 RQ_EMAIL_BACKEND = getattr(
     settings, "RQ_EMAIL_BACKEND", "django.core.mail.backends.smtp.EmailBackend"
