@@ -36,7 +36,7 @@ You must then set ``django_rq_email_backend`` as your ``EMAIL_BACKEND``::
 By default ``django-rq-email-backend`` will use Django's builtin ``SMTP`` email backend
 for the actual sending of the mail. If you'd like to use another backend, you
 may set it in ``RQ_EMAIL_BACKEND`` just like you would normally have set
-``EMAIL_BACKEND`` before you were using Celery. In fact, the normal installation
+``EMAIL_BACKEND`` before you were using RQ. In fact, the normal installation
 procedure will most likely be to get your email working using only Django, then
 change ``EMAIL_BACKEND`` to ``RQ_EMAIL_BACKEND``, and then add the new
 ``EMAIL_BACKEND`` setting from above.
