@@ -13,6 +13,7 @@ select = [
     "FA",
     "FLY",
     "G",
+    "I",
     "INP",
     "INT",
     "ISC",
@@ -38,3 +39,6 @@ select = [
     "YTT",
 ]
 target-version = "py38"
+
+[tool.ruff.lint.isort]
+force-single-line = true
