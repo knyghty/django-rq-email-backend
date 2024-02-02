@@ -1,3 +1,4 @@
 /django_rq_email_backend.egg-info/
+/dist/
 /.ruff_cache/
 __pycache__/
