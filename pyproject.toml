@@ -28,6 +28,7 @@ dependencies = ["django", "django-rq", "rq"]
 description = "Provides Django email integration for RQ (Redis Queue)"
 license = { "file" = "LICENSE" }
 name = "django-rq-email-backend"
+readme = "README.rst"
 version = "1.0.0rc1"
 
 [project.urls]
