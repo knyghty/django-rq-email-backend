@@ -39,6 +39,12 @@ Repository = "https://github.com/knyghty/django-rq-email-backend"
 branch = true
 source = ["."]
 
+[tool.hatch.build.targets.sdist]
+exclude = ["/tests", "requirements.txt", "runtests.py"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["django_rq_email_backend"]
+
 [tool.ruff]
 ignore = ["S105"]
 select = [
