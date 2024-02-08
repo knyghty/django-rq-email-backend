@@ -31,8 +31,8 @@ name = "django-rq-email-backend"
 version = "0.1.3"
 
 [project.urls]
-Homepage = "https://github.com/jefftriplett/django-rq-email-backend"
-Repository = "https://github.com/jefftriplett/django-rq-email-backend"
+Homepage = "https://github.com/knyghty/django-rq-email-backend"
+Repository = "https://github.com/knyghty/django-rq-email-backend"
 
 [tool.coverage.run]
 branch = true
