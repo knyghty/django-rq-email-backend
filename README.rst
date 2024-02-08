@@ -49,30 +49,3 @@ Inspiration
 
 * `django-celery-email <https://bitbucket.org/pmclanahan/django-celery-email>`_
 * `django-rq-mail <https://github.com/thoas/django-rq-mail>`_
-
----------
-Changelog
----------
-
-1.0.0rc1
---------
-* Modernized packaging.
-* Added explicit support for Python 3.8 - 3.12.
-* Added explicit support for Django 3.2, 4.2, and 5.0.
-* Added tests and CI.
-
-0.1.3
------
-* Fixed exception handler to bubble up error if send_email fails.
-
-0.1.2
------
-* Fixed broken installation.
-
-0.1.1
------
-* Renamed project to avoid potential confusion with `django-rq-mail`.
-
-0.1.0
------
-* Initial release
