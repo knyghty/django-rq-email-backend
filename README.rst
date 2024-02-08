@@ -54,6 +54,13 @@ Inspiration
 Changelog
 ---------
 
+1.0.0rc1
+--------
+* Modernized packaging.
+* Added explicit support for Python 3.8 - 3.12.
+* Added explicit support for Django 3.2, 4.1, 4.2, and 5.0.
+* Added tests and CI.
+
 0.1.3
 -----
 * Fixed exception handler to bubble up error if send_email fails.
