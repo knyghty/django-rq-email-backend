@@ -23,6 +23,9 @@ jobs:
             python-version: "3.8"
           - django-version: "5.0"
             python-version: "3.9"
+    services:
+      redis:
+        image: redis
     steps:
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
