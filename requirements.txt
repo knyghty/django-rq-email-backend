@@ -1,5 +1,3 @@
-bumpversion
-check-manifest
 coverage
 django
 django-rq
