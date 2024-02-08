@@ -43,5 +43,7 @@ jobs:
           python -m pip install django~=${{ matrix.django-version }}
       - name: Run tests
         run: python -m coverage run runtests.py
+      - name: Generate coverage report
+        run: python -m coverage xml
       - name: Coveralls
         uses: coverallsapp/github-action@v2
