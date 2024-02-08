@@ -1,28 +1,16 @@
 #!/usr/bin/env python
+import os
 import sys
 
-import django.test.utils
-from django.conf import settings
-
-settings.configure(
-    DATABASES={"default": {"ENGINE": "django.db.backends.sqlite3", "NAME": ":memory;"}},
-    INSTALLED_APPS=[
-        "django_rq",
-        "django_rq_email_backend",
-    ],
-    MIDDLEWARE_CLASSES=[
-        "django.contrib.sessions.middleware.SessionMiddleware",
-        "django.contrib.auth.middleware.AuthenticationMiddleware",
-        "django.contrib.messages.middleware.MessageMiddleware",
-    ],
-)
+import django
+from django.test.runner import DiscoverRunner
 
 
-def runtests(*test_args):
+def runtests():
+    os.environ["DJANGO_SETTINGS_MODULE"] = "tests.settings"
     django.setup()
-    runner_class = django.test.utils.get_runner(settings)
-    test_runner = runner_class(verbosity=1, interactive=True, failfast=False)
-    failures = test_runner.run_tests(["django_rq_email_backend"])
+    test_runner = DiscoverRunner(verbosity=3)
+    failures = test_runner.run_tests([])
     sys.exit(failures)
 
 
