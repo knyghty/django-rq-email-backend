@@ -1,5 +1,7 @@
 bumpversion
 check-manifest
 coverage
+django
+django-rq
 pytest
 wheel

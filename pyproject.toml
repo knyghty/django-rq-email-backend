@@ -35,6 +35,7 @@ Homepage = "https://github.com/jefftriplett/django-rq-email-backend"
 Repository = "https://github.com/jefftriplett/django-rq-email-backend"
 
 [tool.ruff]
+ignore = ["S105"]
 select = [
     "ASYNC",
     "B",
@@ -57,7 +58,6 @@ select = [
     "PERF",
     "PGH",
     "PIE",
-    "PT",
     "PTH",
     "PYI",
     "RET",

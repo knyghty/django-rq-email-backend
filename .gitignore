@@ -2,3 +2,4 @@
 /dist/
 /.ruff_cache/
 __pycache__/
+/.coverage
