@@ -42,8 +42,6 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install django~=${{ matrix.django-version }}
       - name: Run tests
-        run: python runtests.py
+        run: python -m coverage runtests.py
       - name: Coveralls
         uses: coverallsapp/github-action@v2
-        with:
-          file: .coverage
