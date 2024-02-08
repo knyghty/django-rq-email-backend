@@ -24,4 +24,3 @@ def send_email(message, **kwargs):
     else:
         logger.debug("Successfully sent email message to %r.", message.to)
         return result
-    return None

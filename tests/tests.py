@@ -45,10 +45,11 @@ class TestEmailBackend(unittest.TestCase):
     def test_send_email_with_exception_logs(self, mock_get_connection):
         mock_get_connection.return_value = MockEmailConnection()
         with self.assertLogs(
-            level=logging.ERROR, logger="django_rq_email_backend.tasks"
+            level=logging.WARNING, logger="django_rq_email_backend.tasks"
         ) as recording:
             self.backend.send_messages([self.message])
             get_worker().work(burst=True)
+        mock_get_connection.assert_called()
         self.assertEqual(
             "Failed to send email message to ['bar@example.com'], retrying.",
             recording.records[0].getMessage(),
