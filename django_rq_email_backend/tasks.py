@@ -16,11 +16,11 @@ def send_email(message, **kwargs):
     conn = get_connection(
         backend=RQ_EMAIL_BACKEND, **kwargs.pop("_backend_init_kwargs", {})
     )
+    extra = {"to": message.to, "subject": message.subject}
     try:
         result = conn.send_messages([message])
     except Exception:
-        logger.warning("Failed to send email message to %r, retrying.", message.to)
-        logger.exception()
+        logger.exception("Failed to send email message, retrying.", extra=extra)
     else:
-        logger.debug("Successfully sent email message to %r.", message.to)
+        logger.debug("Successfully sent email message.", extra=extra)
         return result
