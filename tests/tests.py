@@ -38,10 +38,7 @@ class TestEmailBackend(unittest.TestCase):
         self.assertIn("To: bar@example.com", output.getvalue())
         log_record = recording.records[0]
         self.assertEqual(log_record.levelno, logging.DEBUG)
-        self.assertEqual(
-            log_record.getMessage(),
-            "Successfully sent email message.",
-        )
+        self.assertEqual(log_record.getMessage(), "Successfully sent email message.")
         self.assertEqual(log_record.__dict__.get("to"), ["bar@example.com"])
         self.assertEqual(log_record.__dict__.get("subject"), "Subject")
 
@@ -57,8 +54,7 @@ class TestEmailBackend(unittest.TestCase):
         log_record = recording.records[0]
         self.assertEqual(log_record.levelno, logging.ERROR)
         self.assertEqual(
-            log_record.getMessage(),
-            "Failed to send email message, retrying.",
+            log_record.getMessage(), "Failed to send email message, retrying."
         )
         self.assertEqual(log_record.__dict__.get("to"), ["bar@example.com"])
         self.assertEqual(log_record.__dict__.get("subject"), "Subject")
