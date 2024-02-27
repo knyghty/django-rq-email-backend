@@ -50,7 +50,10 @@ exclude = ["/tests", "requirements.txt", "runtests.py"]
 packages = ["django_rq_email_backend"]
 
 [tool.ruff]
-ignore = ["S105"]
+target-version = "py38"
+
+[tool.ruff.lint]
+ignore = ["ISC001", "S105"]
 select = [
     "ASYNC",
     "B",
@@ -89,7 +92,6 @@ select = [
     "W",
     "YTT",
 ]
-target-version = "py38"
 
 [tool.ruff.lint.isort]
 force-single-line = true
