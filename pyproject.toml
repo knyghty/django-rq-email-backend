@@ -50,7 +50,7 @@ exclude = ["/tests", "requirements.txt", "runtests.py"]
 packages = ["django_rq_email_backend"]
 
 [tool.ruff]
-ignore = ["S105"]
+ignore = ["ISC001", "S105"]
 select = [
     "ASYNC",
     "B",
