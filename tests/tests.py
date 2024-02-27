@@ -43,7 +43,7 @@ class TestEmailBackend(unittest.TestCase):
             "Successfully sent email message.",
         )
         self.assertEqual(
-            log_record.extra, {"to": ["bar@example.com"], "subject": "Subject"}
+            log_record.__dict__, {"to": ["bar@example.com"], "subject": "Subject"}
         )
 
     @unittest.mock.patch("django_rq_email_backend.tasks.get_connection")
@@ -62,5 +62,5 @@ class TestEmailBackend(unittest.TestCase):
             "Failed to send email message, retrying.",
         )
         self.assertEqual(
-            log_record.extra, {"to": ["bar@example.com"], "subject": "Subject"}
+            log_record.__dict__, {"to": ["bar@example.com"], "subject": "Subject"}
         )
