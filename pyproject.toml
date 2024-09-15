@@ -33,7 +33,7 @@ description = "Provides Django email integration for RQ (Redis Queue)"
 license = { "file" = "LICENSE" }
 name = "django-rq-email-backend"
 readme = "README.rst"
-version = "1.0.1"
+version = "1.1.0"
 
 [project.urls]
 Homepage = "https://github.com/knyghty/django-rq-email-backend"
