@@ -18,14 +18,10 @@ jobs:
     strategy:
       matrix:
         django-version: ["4.2", "5.0", "5.1"]
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
         exclude:
           - django-version: "5.0"
-            python-version: "3.8"
-          - django-version: "5.0"
             python-version: "3.9"
-          - django-version: "5.1"
-            python-version: "3.8"
           - django-version: "5.1"
             python-version: "3.9"
     services:
