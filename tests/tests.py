@@ -30,9 +30,12 @@ class TestEmailBackend(unittest.TestCase):
 
     def test_send_email(self):
         output = io.StringIO()
-        with contextlib.redirect_stdout(output), self.assertLogs(
-            level=logging.DEBUG, logger="django_rq_email_backend.tasks"
-        ) as recording:
+        with (
+            contextlib.redirect_stdout(output),
+            self.assertLogs(
+                level=logging.DEBUG, logger="django_rq_email_backend.tasks"
+            ) as recording,
+        ):
             self.backend.send_messages([self.message])
             get_worker().work(burst=True)
         self.assertIn("To: bar@example.com", output.getvalue())
