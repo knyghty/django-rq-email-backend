@@ -19,7 +19,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -50,7 +49,7 @@ exclude = ["/tests", "requirements.txt", "runtests.py"]
 packages = ["django_rq_email_backend"]
 
 [tool.ruff]
-target-version = "py38"
+target-version = "py39"
 
 [tool.ruff.lint]
 ignore = ["ISC001", "S105"]
