@@ -13,6 +13,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Run prek
+        uses: j178/prek-action@v2
+
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -48,6 +56,15 @@ jobs:
         run: python -m coverage xml
       - name: Coveralls
         uses: coverallsapp/github-action@v2
+
+  checks:
+    if: always()
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - name: Check all jobs passed
+        run: |
+          [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" = "false" ]
 
   release:
     if: ${{ github.event_name == 'release' }}
