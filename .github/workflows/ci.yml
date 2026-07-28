@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Run prek
         uses: j178/prek-action@v2
 
@@ -39,7 +39,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Install dependencies
         run: |
           python -m pip install -U pip wheel
@@ -77,7 +77,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Install dependencies
         run: python -m pip install -U pip wheel hatch
       - name: Build package
